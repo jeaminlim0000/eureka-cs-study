@@ -1,8 +1,8 @@
 # Week11 Java Core — Exception
 
-> 발표자: 서희  
-> 발표일: 2026.09.22  
-> 주차 Issue: [#1](https://github.com/jeaminlim0000/eureka-cs-study/issues/1)  
+> 발표자: 서희  
+> 발표일: 2026.09.22  
+> 주차 Issue: [#1](https://github.com/jeaminlim0000/eureka-cs-study/issues/1)  
 > 발표 질의응답: [Discussion #12](https://github.com/jeaminlim0000/eureka-cs-study/discussions/12)
 
 ## 1. Error와 Exception
@@ -73,4 +73,3 @@ Repository는 DB 접근 문제를 HTTP 응답으로 만들지 않습니다. Spri
 
 - [Spring MVC Controller Advice](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-advice.html)
 - [Spring Data Access Exception Handling](https://docs.spring.io/spring-framework/reference/data-access/dao.html)
-
