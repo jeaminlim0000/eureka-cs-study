@@ -1,6 +1,6 @@
 # Week11 Java Core — GC
 
-> 발표자: 재민　 발표일: 2026.09.22　 주차 Issue: [#1](https://github.com/jeaminlim0000/eureka-cs-study/issues/1)
+> 발표자: 재민　 발표일: 2026.09.22　 주차 Issue: [#1](https://github.com/jeaminlim0000/eureka-cs-study/issues/1)　 발표 질의응답: [Discussion #16](https://github.com/jeaminlim0000/eureka-cs-study/discussions/16)
 
 ## 1. GC 대상 판단
 
