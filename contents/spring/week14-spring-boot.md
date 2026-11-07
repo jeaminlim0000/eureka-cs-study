@@ -1,17 +1,18 @@
-# Week14 · Spring Boot
+# Week14 Spring MVC & JPA — Spring Boot
 
-- 작성자 · 서희 (@superparkgit)
-- 학습 일정 · 2026.10.13, 주차 이슈 기준
-- 기록 보완일 · 2026.11.07
-- 주차 이슈 · [Spring MVC & JPA #28](https://github.com/jeaminlim0000/eureka-cs-study/issues/28)
+> 발표자: 서희
+> 학습 일정: 2026.10.13 (주차 이슈 기준)
+> 주차 Issue: [#28](https://github.com/jeaminlim0000/eureka-cs-study/issues/28)
+> 발표 질의응답: [Discussion #35](https://github.com/jeaminlim0000/eureka-cs-study/discussions/35)
+> 기록 보완일: 2026.11.07
 
-## 핵심 개념
+## 1. 핵심 개념
 
 Spring Framework는 IoC·DI, 트랜잭션, MVC 같은 애플리케이션 기반 기능을 제공합니다. Spring Boot는 Spring 애플리케이션을 구성하고 실행하기 위한 자동 설정, 의존성 구성, 실행 지원 등을 제공합니다.
 
 Spring Boot를 사용해도 Controller, Service, Repository의 책임과 비즈니스 규칙은 애플리케이션에서 설계합니다. 자동 설정이 실제로 무엇을 구성했는지도 조건과 설정을 통해 확인할 수 있습니다.
 
-## 주요 구성 요소
+## 2. 주요 구성 요소
 
 | 요소 | 역할 |
 | --- | --- |
@@ -21,7 +22,7 @@ Spring Boot를 사용해도 Controller, Service, Repository의 책임과 비즈�
 | 내장 서버 | Servlet 웹 애플리케이션을 외부 WAS 배포 없이 실행할 수 있는 구성 제공 |
 | 외부 설정 | 코드와 실행 환경의 설정을 분리해 여러 환경에서 같은 애플리케이션을 구성 |
 
-## 애플리케이션 시작점
+## 3. 애플리케이션 시작점
 
 ```java
 package com.example.study;
@@ -41,7 +42,7 @@ public class StudyApplication {
 
 예를 들어 메인 클래스가 `com.example.study`에 있다면, `com.example.study.notification`의 서비스가 기본 컴포넌트 스캔 범위에 들어갈 수 있습니다. 패키지를 옮긴 뒤 빈이 등록되지 않으면 메인 클래스 위치와 스캔 설정을 함께 확인합니다.
 
-## 자동 설정이 적용되는 과정
+## 4. 자동 설정이 적용되는 과정
 
 1. 추가된 라이브러리와 실행 환경의 조건을 확인합니다.
 2. 자동 설정 후보의 조건에 맞는 구성을 적용합니다.
@@ -52,7 +53,7 @@ public class StudyApplication {
 
 `--debug` 옵션으로 실행하면 조건 평가 보고서를 확인할 수 있습니다. 예상과 다르게 설정됐을 때 의존성, 활성 프로필, 사용자 정의 빈, 자동 설정 조건을 함께 살펴봅니다.
 
-## 외부 설정과 프로필
+## 5. 외부 설정과 프로필
 
 ```yaml
 spring:
@@ -67,7 +68,7 @@ server:
 
 외부 설정에는 우선순위가 있어서 같은 키가 여러 곳에 있으면 최종값이 달라질 수 있습니다. 파일의 값만 보고 판단하기보다 활성 프로필과 환경 변수, 실행 인자까지 함께 확인합니다. 민감한 접속 정보는 공개 학습 자료의 예시값으로 사용하지 않습니다.
 
-## 요청 처리에서의 위치
+## 6. 요청 처리에서의 위치
 
 ```text
 애플리케이션 실행
@@ -80,7 +81,7 @@ server:
 
 이 흐름에서 Spring Boot는 애플리케이션 실행과 구성을 지원합니다. 개별 요청의 라우팅과 인자 변환은 Spring MVC가, 데이터 변경 규칙은 서비스가, DB 접근은 Repository와 데이터 접근 기술이 맡습니다. 일부 빈은 지연 생성될 수 있으므로 모든 객체가 반드시 시작 시점에 만들어진다고 가정하지 않습니다.
 
-## 사용 시 확인할 제약
+## 7. 사용 시 확인할 제약
 
 - Starter 추가만으로 업무에 필요한 접속 정보와 보안 정책이 모두 완성되지는 않습니다. 실제 실행 설정과 조건을 확인합니다.
 - 로컬과 운영의 결과가 다르면 프로필과 외부 설정값의 차이부터 비교합니다.

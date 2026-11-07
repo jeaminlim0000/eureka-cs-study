@@ -1,17 +1,18 @@
-# Week15 · Spring Security 요청 흐름
+# Week15 Security 인증 & 보안 — Spring Security 요청 흐름
 
-- 작성자 · 서희 (@superparkgit)
-- 학습 일정 · 2026.10.20, 주차 이슈 기준
-- 기록 보완일 · 2026.11.07
-- 주차 이슈 · [Security 인증 & 보안 #29](https://github.com/jeaminlim0000/eureka-cs-study/issues/29)
+> 발표자: 서희
+> 학습 일정: 2026.10.20 (주차 이슈 기준)
+> 주차 Issue: [#29](https://github.com/jeaminlim0000/eureka-cs-study/issues/29)
+> 발표 질의응답: [Discussion #36](https://github.com/jeaminlim0000/eureka-cs-study/discussions/36)
+> 기록 보완일: 2026.11.07
 
-## 핵심 개념
+## 1. 핵심 개념
 
 인증은 요청자가 누구인지 확인하는 과정이고, 인가는 그 요청자가 특정 작업을 수행할 수 있는지 판단하는 과정입니다.
 
 Servlet 애플리케이션에서 Spring Security는 주로 필터를 통해 요청을 처리합니다. 요청이 Controller까지 전달되기 전에 인증 정보와 접근 정책을 확인하거나 응답을 끝낼 수 있습니다.
 
-## 주요 구성 요소
+## 2. 주요 구성 요소
 
 | 요소 | 역할 |
 | --- | --- |
@@ -23,7 +24,7 @@ Servlet 애플리케이션에서 Spring Security는 주로 필터를 통해 요�
 | `AuthenticationManager` | 인증 처리를 맡는 인터페이스 |
 | `AuthenticationProvider` | 지원하는 인증 방식에 따라 인증을 수행 |
 
-## 일반적인 요청 흐름
+## 3. 일반적인 요청 흐름
 
 ```text
 HTTP 요청
@@ -42,7 +43,7 @@ HTTP 요청
 
 보안 컨텍스트를 이후 요청에 보존하는 방식은 세션이나 저장소 설정 등에 따라 달라집니다. 같은 사용자의 다음 요청에서 컨텍스트를 어디서 복원하는지도 함께 확인합니다.
 
-## 요청별 접근 정책 예시
+## 4. 요청별 접근 정책 예시
 
 다음 코드는 HTTP Basic 인증과 URL별 접근 조건을 설명하는 Servlet 기반 학습 예시입니다.
 
@@ -77,13 +78,13 @@ public class SecurityConfig {
 
 이 예시는 CSRF 설정을 해제하지 않습니다. `permitAll()`은 인가 규칙이므로, 인증·CSRF 등 다른 필터가 처리하는 조건도 함께 적용될 수 있습니다.
 
-## 인증 실패와 접근 거부
+## 5. 인증 실패와 접근 거부
 
 일반적인 API 정책에서는 인증이 없거나 유효하지 않은 경우 401, 인증된 사용자에게 권한이 없는 경우 403을 사용할 수 있습니다. 실제 응답은 필터가 실패한 지점과 등록된 핸들러 설정으로 확인합니다.
 
 `ExceptionTranslationFilter`는 아래쪽 필터에서 발생한 인증 관련 예외나 접근 거부를 HTTP 처리로 연결합니다. 필요한 인증을 시작할 때는 `AuthenticationEntryPoint`를, 인증된 사용자의 접근 거부를 처리할 때는 `AccessDeniedHandler`를 사용할 수 있습니다. 개별 인증 필터의 실패 처리도 함께 확인해야 합니다.
 
-## 사용 시 확인할 제약
+## 6. 사용 시 확인할 제약
 
 - 필터에서 끝난 요청은 Controller에 도달하지 않을 수 있습니다. Controller 로그와 예외 처리만으로 실패 경로를 모두 파악하기 어렵습니다.
 - URL 수준의 접근 허용과 특정 데이터의 소유자 확인은 각각 확인합니다. 로그인한 사용자도 다른 사용자의 상담 내역을 조회할 권한은 없을 수 있습니다.
