@@ -45,3 +45,15 @@
 - [주제 1 인터페이스와 다형성](https://github.com/jeaminlim0000/eureka-cs-study/discussions/30)
 - [주제 2 IoC와 생성자 주입](https://github.com/jeaminlim0000/eureka-cs-study/discussions/31)
 - [주제 3 Spring 빈 등록과 주입 대상 선택](https://github.com/jeaminlim0000/eureka-cs-study/discussions/32)
+
+## 서희의 1주차 작성 예시 따라보기
+
+[개념 노트](notes/example.md)에서 공통 주제 세 개를 읽고, 아래 질문 글과 예시 댓글을 차례로 확인합니다. 각 댓글에는 첫 답변, 꼬리 질문, 접어서 보는 AI 참고 답변, 수정한 답변, 다음 복습 질문이 담겨 있습니다.
+
+| 공통 주제 | 질문 글 | 서희 작성 예시 댓글 |
+| --- | --- | --- |
+| 인터페이스와 다형성 | [질문 #30](https://github.com/jeaminlim0000/eureka-cs-study/discussions/30) | [답변과 비교 과정](https://github.com/jeaminlim0000/eureka-cs-study/discussions/30#discussioncomment-19454972) |
+| IoC와 생성자 주입 | [질문 #31](https://github.com/jeaminlim0000/eureka-cs-study/discussions/31) | [답변과 비교 과정](https://github.com/jeaminlim0000/eureka-cs-study/discussions/31#discussioncomment-19454980) |
+| Spring 빈 등록과 주입 대상 선택 | [질문 #32](https://github.com/jeaminlim0000/eureka-cs-study/discussions/32) | [답변과 비교 과정](https://github.com/jeaminlim0000/eureka-cs-study/discussions/32#discussioncomment-19454985) |
+
+예시는 학습용 알림 코드로 설명한 연습 답변입니다. 각자 작성할 때는 본인 코드와 실제로 확인한 내용을 근거로 답하고, 연결할 경험이 없으면 적용할 예시와 검증 방법을 적습니다.

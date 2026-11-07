@@ -1,8 +1,8 @@
-# 면접 1주차 · 개념 노트 예시
+# 면접 1주차 · 서희의 개념 노트 작성 예시
 
 공통 주제 세 개를 한 파일에 정리한 예시입니다. 예제의 알림 발송 코드는 학습용이며, 실제 프로젝트 경험을 설명할 때는 본인이 작성한 클래스나 메서드로 바꿉니다.
 
-기존 학습 연결은 **13주차 Spring Core**입니다. 실제 저장소에 올릴 때 해당 학습 노트 링크와 본인 Discussion 링크를 아래에 붙입니다.
+작성자는 **서희 (@superparkgit)**입니다. 기존 학습은 [13주차 Spring Core 이슈 #27](https://github.com/jeaminlim0000/eureka-cs-study/issues/27)과 연결합니다. 각 주제의 질문 글에서 면접처럼 답한 댓글과 수정한 답변까지 함께 볼 수 있습니다.
 
 ## 1. 인터페이스와 다형성
 
@@ -138,7 +138,9 @@ Lombok의 `@RequiredArgsConstructor`는 생성자를 생성합니다. Spring의 
 
 ## 다시 풀 질문
 
-- 질문 링크를 Discussion을 만든 후 붙입니다.
+- [인터페이스와 다형성 답변 예시](https://github.com/jeaminlim0000/eureka-cs-study/discussions/30#discussioncomment-19454972)
+- [IoC와 생성자 주입 답변 예시](https://github.com/jeaminlim0000/eureka-cs-study/discussions/31#discussioncomment-19454980)
+- [Spring 빈 등록과 주입 대상 선택 답변 예시](https://github.com/jeaminlim0000/eureka-cs-study/discussions/32#discussioncomment-19454985)
 - 다음 주에는 자료 없이 객체 생성과 주입 흐름을 다시 설명합니다.
 - 2~3주 뒤에는 같은 인터페이스의 빈이 두 개가 된 상황으로 다시 답합니다.
 

@@ -93,3 +93,9 @@ Lombok이 생성자를 만드는 코드라면 `@Qualifier`가 실제 주입 지�
 - 인터페이스 구현에 성공과 실패를 기록하는 역할을 추가한다면 책임을 어디에 두겠어요?
 - 테스트 대역을 사용한 단위 테스트는 통과하는데 실제 Spring 앱은 시작하지 않는다면 무엇을 확인하겠어요?
 - 구현체 두 개가 모두 등록되어 있을 때, 서로 다른 두 서비스에서 각각 다른 구현을 선택하려면 어떻게 하겠어요?
+
+## 실제 게시된 작성 예시
+
+- [인터페이스와 다형성 예시 댓글](https://github.com/jeaminlim0000/eureka-cs-study/discussions/30#discussioncomment-19454972)
+- [IoC와 생성자 주입 예시 댓글](https://github.com/jeaminlim0000/eureka-cs-study/discussions/31#discussioncomment-19454980)
+- [Spring 빈 등록과 주입 대상 선택 예시 댓글](https://github.com/jeaminlim0000/eureka-cs-study/discussions/32#discussioncomment-19454985)
