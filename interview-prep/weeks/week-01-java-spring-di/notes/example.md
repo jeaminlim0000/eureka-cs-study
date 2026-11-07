@@ -1,8 +1,8 @@
 # 면접 1주차 · 서희의 개념 노트 작성 예시
 
-공통 주제 세 개를 한 파일에 정리한 예시입니다. 예제의 알림 발송 코드는 학습용이며, 실제 프로젝트 경험을 설명할 때는 본인이 작성한 클래스나 메서드로 바꿉니다.
+공통 주제 세 개를 한 파일에 정리한 예시입니다. 알림 발송 방식이 달라지는 학습용 코드를 통해 각 개념이 동작하는 지점을 함께 정리했습니다.
 
-작성자는 **서희 (@superparkgit)**입니다. 기존 학습은 [13주차 Spring Core 이슈 #27](https://github.com/jeaminlim0000/eureka-cs-study/issues/27)과 연결합니다. 각 주제의 질문 글에서 면접처럼 답한 댓글과 수정한 답변까지 함께 볼 수 있습니다.
+작성자는 **서희 (@superparkgit)**입니다. 기존 학습은 [13주차 Spring Core 이슈 #27](https://github.com/jeaminlim0000/eureka-cs-study/issues/27)과 연결합니다.
 
 ## 1. 인터페이스와 다형성
 
@@ -46,16 +46,6 @@ class NotificationService {
 
 `NotificationService`가 `NotificationSender` 타입을 사용해도, 실제로 이메일 구현 객체가 들어오면 그 객체의 `send()`가 실행됩니다. 문자 구현 객체로 바꾸면 서비스 메서드를 수정하지 않고 다른 구현을 실행할 수 있습니다.
 
-### 면접에서 연결할 부분
-
-“알림을 호출하는 서비스와 발송 구현을 나눴습니다. 서비스는 `NotificationSender`의 동작만 사용하고, 생성자로 전달된 구현에 따라 발송 방식이 달라집니다.”
-
-실제 프로젝트에서는 이 구분이 필요했던 요구사항과 유지 비용까지 설명합니다.
-
-### 질문 글
-
-[면접 질문 Discussion #30](https://github.com/jeaminlim0000/eureka-cs-study/discussions/30)
-
 ## 2. IoC와 생성자 주입
 
 ### 핵심 개념
@@ -83,10 +73,6 @@ String result = service.notifyUser("예약 안내");
 ### 테스트에서 확인할 수 있는 것
 
 고정된 응답을 반환하는 `NotificationSender`를 전달해서, 서비스가 발송 객체에 올바른 메시지를 넘기는지 확인할 수 있습니다. 실제 메일 서버와의 통신은 별도의 통합 검증이 필요합니다.
-
-### 질문 글
-
-[면접 질문 Discussion #31](https://github.com/jeaminlim0000/eureka-cs-study/discussions/31)
 
 ## 3. Spring 빈 등록과 주입 대상 선택
 
@@ -125,24 +111,6 @@ class NotificationService {
 - 오류가 나면 실제로 등록된 빈, 생성자 매개변수 타입, 후보를 고르는 설정을 함께 확인합니다.
 
 Lombok의 `@RequiredArgsConstructor`는 생성자를 생성합니다. Spring의 빈 주입은 그 생성자를 사용하는 별도의 단계입니다. 위 예시에서는 생성자 매개변수의 `@Qualifier`를 보여주기 위해 생성자를 직접 적었습니다.
-
-### 질문 글
-
-[면접 질문 Discussion #32](https://github.com/jeaminlim0000/eureka-cs-study/discussions/32)
-
-## 더 확인할 부분
-
-- 내 프로젝트에서 실제로 여러 구현을 선택하는 주입 지점은 어디인가요?
-- 컴포넌트 스캔 범위는 어떤 설정에서 결정되나요?
-- 생성자에 전달하는 테스트 대역으로 검증한 동작은 무엇인가요?
-
-## 다시 풀 질문
-
-- [인터페이스와 다형성 답변 예시](https://github.com/jeaminlim0000/eureka-cs-study/discussions/30#discussioncomment-19454972)
-- [IoC와 생성자 주입 답변 예시](https://github.com/jeaminlim0000/eureka-cs-study/discussions/31#discussioncomment-19454980)
-- [Spring 빈 등록과 주입 대상 선택 답변 예시](https://github.com/jeaminlim0000/eureka-cs-study/discussions/32#discussioncomment-19454985)
-- 다음 주에는 자료 없이 객체 생성과 주입 흐름을 다시 설명합니다.
-- 2~3주 뒤에는 같은 인터페이스의 빈이 두 개가 된 상황으로 다시 답합니다.
 
 ## 확인 자료와 검증 상태
 
