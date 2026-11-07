@@ -6,6 +6,7 @@
 
 - [주차별 주제와 발표 기록](https://github.com/jeaminlim0000/eureka-cs-study/issues)
 - [발표 질의응답](https://github.com/jeaminlim0000/eureka-cs-study/discussions)
+- [면접 대비 8주](interview-prep/README.md)
 
 ## 매주 진행 방식
 
