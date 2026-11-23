@@ -1,6 +1,7 @@
-# 면접 3주차 · 서희 (@superparkgit)
+# 면접 03회차 · 서희 (@superparkgit)
 
 - 정리일: 2026.11.23
+- 회차 이슈: [면접 03회차 · 운영체제와 JVM #54](https://github.com/jeaminlim0000/eureka-cs-study/issues/54)
 - 공통 주제: 프로세스·스레드와 컨텍스트 스위칭 / 가상 메모리와 페이지 폴트 / JVM 스택·힙과 GC
 - 면접 질문: [프로세스·스레드 #47](https://github.com/jeaminlim0000/eureka-cs-study/discussions/47) · [가상 메모리 #48](https://github.com/jeaminlim0000/eureka-cs-study/discussions/48) · [JVM·GC #49](https://github.com/jeaminlim0000/eureka-cs-study/discussions/49)
 
