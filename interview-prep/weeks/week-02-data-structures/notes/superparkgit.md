@@ -1,6 +1,7 @@
-# 면접 2주차 · 서희 (@superparkgit)
+# 면접 02회차 · 서희 (@superparkgit)
 
 - 정리일: 2026.11.23
+- 회차 이슈: [면접 02회차 · 자료구조와 Java 컬렉션 #53](https://github.com/jeaminlim0000/eureka-cs-study/issues/53)
 - 공통 주제: 시간 복잡도와 배열·연결 리스트 / 스택·큐·우선순위 큐 / HashMap과 객체 동등성
 - 면접 질문: [배열·연결 리스트 #44](https://github.com/jeaminlim0000/eureka-cs-study/discussions/44) · [스택·큐 #45](https://github.com/jeaminlim0000/eureka-cs-study/discussions/45) · [HashMap #46](https://github.com/jeaminlim0000/eureka-cs-study/discussions/46)
 
